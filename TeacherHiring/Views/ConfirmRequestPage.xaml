@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="TeacherHiring.Views.ConfirmRequestPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Confirmar" Command="{Binding SaveCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Padding="15">
+            <StackLayout Spacing="1" Padding="1">
+                <Label Text="Materia" FontSize="Medium" />
+                <Entry Text="{Binding Item.ClassName, Mode=OneWay}" FontSize="Small" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Spacing="1" Padding="1">
+                <Label Text="Fecha" FontSize="Medium" />
+                <Entry Text="{Binding Item.ShortDate, Mode=OneWay}" FontSize="Small" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Spacing="1" Padding="1">
+                <Label Text="Hora" FontSize="Medium" />
+                <Entry Text="{Binding Item.Time, Mode=OneWay}" FontSize="Small" IsEnabled="False" />
+            </StackLayout>
+            <StackLayout Spacing="1" Padding="1">
+                <Label Text="Alumno" FontSize="Medium" />
+                <Entry Text="{Binding Item.StudentName, Mode=OneWay}" FontSize="Small" IsEnabled="False" />
+            </StackLayout>
+                <maps:Map WidthRequest="320" HeightRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+            x:Name="MyMap"
+            IsShowingUser="true"
+            MapType="Street" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

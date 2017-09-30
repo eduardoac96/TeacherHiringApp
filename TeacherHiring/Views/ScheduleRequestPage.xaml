@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="TeacherHiring.Views.ScheduleRequestPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnConfirm" Text="Solicitar" Command="{Binding RequestCommand}"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <StackLayout>
+                    <Image Source="if_profle_1055000.png" HorizontalOptions="Center" Margin="0,8" WidthRequest="90" HeightRequest="90" />
+                </StackLayout>
+                <StackLayout>
+                    <Entry Text="{Binding Schedule.TeacherName, Mode=OneWay}" IsEnabled="False" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout>
+                    <Entry Text="{Binding Schedule.ShortDate, Mode=OneWay}" IsEnabled="False" HorizontalOptions="CenterAndExpand" FontSize="Small" />
+                </StackLayout>
+                <StackLayout>
+                    <Entry Text="{Binding Schedule.Time, Mode=OneWay}" IsEnabled="False" HorizontalOptions="CenterAndExpand" FontSize="Small" />
+                </StackLayout>
+                <maps:Map WidthRequest="320" HeightRequest="200" x:Name="MyMap" IsShowingUser="true" MapType="Street" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

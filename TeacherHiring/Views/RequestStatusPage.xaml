@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeacherHiring.Views.RequestStatusPage">
+    <StackLayout Spacing="20" Padding="15">
+        <ListView 
+            x:Name="ListItems"
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="True"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+            CachingStrategy="RecycleElement"
+            ItemSelected="OnItemSelected"
+            >
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell Height="75">
+                        <StackLayout>
+                            <Label Text="{Binding ClassName}" LineBreakMode="WordWrap" FontSize="Medium" />
+                            <Label Text="{Binding ShortDate}" LineBreakMode="WordWrap"  FontSize="Small" />
+                            <Label Text="{Binding Time}" LineBreakMode="WordWrap"  FontSize="Small" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</StackLayout>
+</ContentPage>

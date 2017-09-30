@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TeacherHiring.Login">
+	<ScrollView>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="240" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" IsVisible="False"   
+				Grid.RowSpan="2"
+				Color="{StaticResource Key=colorPrimary}"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<StackLayout Grid.Row="1" Orientation="Vertical" Padding="20,0">
+				<Entry Placeholder="Usuario"
+					Text="{Binding User.Username, Mode=TwoWay}"
+					FontSize="Medium"
+					TextColor="Gray"
+					HorizontalTextAlignment="Start" />
+
+                <Entry Placeholder="Password"
+					Text="{Binding User.Password, Mode=TwoWay}"
+					IsPassword="true"
+					FontSize="Medium"
+					TextColor="Gray"
+					HorizontalTextAlignment="Start" />
+
+                <Button Text="Iniciar Sesión" 
+					BackgroundColor="{StaticResource Key=colorPrimary}"
+					TextColor="White"
+					Command = "{Binding LoginCommand}" />
+				
+			</StackLayout>
+				
+		</Grid>
+	</ScrollView>
+</ContentPage>

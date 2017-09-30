@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{128FF98A-2337-4DDE-BBD5-B476C268A457}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TeacherHiring</RootNamespace>
+    <AssemblyName>TeacherHiring</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="Views\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WelcomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShellPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InformacionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignaturePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AppServices.cs" />
+    <Compile Include="Services\StudentServices.cs" />
+    <Compile Include="Services\TeacherServices.cs" />
+    <Compile Include="ViewModel\RegisterClassPageViewModel.cs" />
+    <Compile Include="ViewModel\ClassesPageViewModel.cs" />
+    <Compile Include="ViewModel\ConfirmedRequestsViewModel.cs" />
+    <Compile Include="ViewModel\ConfirmRequestViewModel.cs" />
+    <Compile Include="ViewModel\PendingRequestsViewModel.cs" />
+    <Compile Include="ViewModel\RequestStatusViewModel.cs" />
+    <Compile Include="ViewModel\ScheduleRequestViewModel.cs" />
+    <Compile Include="ViewModel\TeacherAssignmentsViewModel.cs" />
+    <Compile Include="ViewModel\RequestsViewModel.cs" />
+    <Compile Include="ViewModel\WelcomeViewModel.cs" />
+    <Compile Include="Views\ClassDetailPage.xaml.cs">
+      <DependentUpon>ClassDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterClassPage.xaml.cs">
+      <DependentUpon>RegisterClassPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClassListPage.xaml.cs">
+      <DependentUpon>ClassListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmedRequestsPage.xaml.cs">
+      <DependentUpon>ConfirmedRequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmRequestPage.xaml.cs">
+      <DependentUpon>ConfirmRequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CounselingDetailPage.xaml.cs">
+      <DependentUpon>CounselingDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BaseViewModel.cs" />
+    <Compile Include="Services\SecurirtyServices.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="Views\MasterDetailPage.xaml.cs">
+      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MasterPageMenuItem.cs" />
+    <Compile Include="ViewModel\MasterPageViewModel.cs" />
+    <Compile Include="Views\PendingRequestsPage.xaml.cs">
+      <DependentUpon>PendingRequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestStatusPage.xaml.cs">
+      <DependentUpon>RequestStatusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScheduleRequestPage.xaml.cs">
+      <DependentUpon>ScheduleRequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherSchedulePage.xaml.cs">
+      <DependentUpon>TeacherSchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestsPage.xaml.cs">
+      <DependentUpon>RequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellPage.xaml.cs">
+      <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformacionPage.xaml.cs">
+      <DependentUpon>InformacionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Informacion.cs" />
+    <Compile Include="ViewModel\InformacionViewModel.cs" />
+    <Compile Include="Database\IFileHelper.cs" />
+    <Compile Include="Model\dbUsuario.cs" />
+    <Compile Include="Views\SignaturePage.xaml.cs">
+      <DependentUpon>SignaturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model\Person.cs" />
+    <Compile Include="Database\Model\Materia.cs" />
+    <Compile Include="Database\Model\ProfesorMateria.cs" />
+    <Compile Include="Database\Model\AlumnoMateria.cs" />
+    <Compile Include="Views\MapPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Database\Controllers\" />
+    <Folder Include="Helpers\CustomControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\DomainEntities.csproj">
+      <Project>{e53510e2-c1c7-4a6f-bde3-f8e729e82e2f}</Project>
+      <Name>DomainEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ClassListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RegisterClassPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RequestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TeacherSchedulePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ScheduleRequestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\RequestStatusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PendingRequestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ConfirmRequestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ConfirmedRequestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CounselingDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ClassDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

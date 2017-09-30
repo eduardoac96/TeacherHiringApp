@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="Información"
+	x:Class="TeacherHiring.InformacionPage">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="16,20,16,0">
+				<Label Text="{Binding FullName}"
+					HorizontalTextAlignment="Center"
+					FontFamily="{StaticResource MediumFontFamily}"
+					TextColor="{StaticResource HeaderTextColor}"
+					FontSize="24" />
+				<Image Source="if_profle_1055000.png" HorizontalOptions="Center" Margin="0,8" />
+				<Entry Placeholder="Username"
+					Text="{Binding Username, Mode=TwoWay}"
+					FontSize="Medium"
+					TextColor="Gray"
+					HorizontalTextAlignment="Start" />
+				<Entry Placeholder="Password"
+					Text="{Binding Password, Mode=TwoWay}"
+					FontSize="Medium"
+					TextColor="Gray"
+					IsPassword="true"
+					HorizontalTextAlignment="Start" />
+				<Label Text="{Binding LatLong}"
+					HorizontalTextAlignment="Center"
+					FontFamily="{StaticResource MediumFontFamily}"
+					TextColor="{StaticResource HeaderTextColor}"
+					FontSize="24" />
+				<Button Text="Actualizar Perfil"
+					BackgroundColor="{StaticResource Key=colorPrimary}"
+					TextColor="White"
+					Command="{Binding SaveInformacion}" />
+				<Button Text="Ver Mapa"
+					BackgroundColor="{StaticResource Key=colorPrimary}"
+					TextColor="White"
+					Command="{Binding ViewMap}" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

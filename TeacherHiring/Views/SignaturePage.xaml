@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:signature="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+	Title="Firma"
+	x:Class="TeacherHiring.SignaturePage"
+	Padding="10,10,10,5">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Text="Guardar"
+			Clicked="btnSave_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout
+			VerticalOptions="FillAndExpand"
+			HorizontalOptions="FillAndExpand"
+			Orientation="Horizontal">
+			<signature:SignaturePadView
+				x:Name="padView"
+				HeightRequest="150"
+				WidthRequest="240"
+				BackgroundColor="White"
+				CaptionText="Tu Firma Aqui"
+				CaptionTextColor="Black"
+				ClearText="Limpiar!"
+				ClearTextColor="Blue"
+				PromptText="Firme Aqui"
+				PromptTextColor="Black"
+				SignatureLineColor="Black"
+				StrokeColor="Black"
+				VerticalOptions="FillAndExpand"
+				HorizontalOptions="FillAndExpand"
+				StrokeWidth="2" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
